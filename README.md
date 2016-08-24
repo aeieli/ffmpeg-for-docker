@@ -87,10 +87,15 @@ sudo docker run --rm -v /本机输入文件目录:/容器挂载目录 image镜�
 `-b 128k  (设置比特率，缺省200kb/s）`
 ```
 sudo docker run --rm -v /本机输入文件目录:/容器挂载目录 image镜像标签名 -i /容器挂载目录/媒体文件名 -b 128k -c:v libx264 -c:a aac -map 0 -flags -global_header -f ssegment -segment_time 10 -segment_format mpegts -segment_list /容器挂载目录/媒体输出播放列表.m3u8 /容器挂载目录/媒体输出文件名%03d.ts
+
 ```
+
 -r fps 设置帧频 缺省25
+
 -aspect aspect 设置横纵比 4:3 16:9 或 1.3333 1.7777
+
 -s size 设置帧大小 格式为WXH 缺省160X128.下面的简写也可以直接使用：Sqcif 128X96 qcif 176X144 cif 252X288 4cif 704X576 
+
 其他可以参考文档： https://www.ffmpeg.org/ffmpeg-formats.html#hls-1
 
 http://www.cnblogs.com/vicowong/archive/2011/03/08/1977088.html

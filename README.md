@@ -32,6 +32,7 @@ echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' &gt; /etc/apt/s
 ```
 
 PS: 其他版本Ubuntu，将语句中的<code>‘ ubuntu-xenial ’</code> 替换成对应的版本号
+
 |    |   |   |    |
 | :----  | :----  |:----  |:----  |
 

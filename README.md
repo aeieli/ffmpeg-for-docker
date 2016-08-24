@@ -102,4 +102,4 @@ http://www.cnblogs.com/vicowong/archive/2011/03/08/1977088.html
 
 # License
 
-MIT 2.0
+MIT License

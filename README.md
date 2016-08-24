@@ -28,21 +28,20 @@ sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys581
 ## Setp4:
 
 ``` bash
-echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' &gt; /etc/apt/sources.list.d/docker.list
+echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' > /etc/apt/sources.list.d/docker.list
 ```
 
 PS: 其他版本Ubuntu，将语句中的<code>‘ ubuntu-xenial ’</code> 替换成对应的版本号
 
-|    |   |   |    |
-| :----  | :----  |:----  |:----  |
-
+|        |        |       |       |
+| :----: | :----:  |:----:  |:----:  |
 | Ubuntu Precise 12.04 (LTS)| Ubuntu Trusty 14.04 (LTS)| Ubuntu Wily 15.10 | Ubuntu Xenial 16.04 (LTS) |
 |ubuntu-precise |ubuntu-trusty | ubuntu-wily | ubuntu-xenial |
 
 ## Setp5:
 
 ```  bash
-apt-get update &amp;&amp; apt-get install -y -q docker-engine &amp;&amp; service docker start
+apt-get update && apt-get install -y -q docker-engine && service docker start
 
 ```
 

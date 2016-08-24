@@ -1,4 +1,8 @@
+
+
 # 1.安装 Docker for Ubuntn 16.04
+
+如果非Ubuntn系统，请参考其他版本的Docker安装教程
 
 参考链接： https://docs.docker.com/engine/installation/linux/ubuntulinux/
 
@@ -12,19 +16,19 @@ sudo apt-get update
 Setp2:
 
 ```   bash
-   sudo apt-get installapt-transport-https ca-certificates
+sudo apt-get installapt-transport-https ca-certificates
 ```
 
 Setp3:
 
 ``` bash
-     sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys58118E89F3A912897C070ADBF76221572C52609D
+sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys58118E89F3A912897C070ADBF76221572C52609D
 ```
 
 Setp4:
 
 ``` bash
-    echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' &gt; /etc/apt/sources.list.d/docker.list
+echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' &gt; /etc/apt/sources.list.d/docker.list
 ```
 
 PS: 其他版本Ubuntu，将语句中的<code>‘ ubuntu-xenial ’</code> 替换成对应的版本号
@@ -50,7 +54,8 @@ PS: 其他版本Ubuntu，将语句中的<code>‘ ubuntu-xenial ’</code> 替�
 Setp5:
 
 ```  bash
-   apt-get update &amp;&amp; apt-get install -y -q docker-engine &amp;&amp; service docker start
+apt-get update &amp;&amp; apt-get install -y -q docker-engine &amp;&amp; service docker start
+
 ```
 
 其他linux版本，请参考 https://docs.docker.com/engine/installation/linux/
@@ -66,7 +71,7 @@ Setp5:
 </ul>
 
 ``` bash
-    Mkdir xxxxx  &amp;&amp; cd xxxxx
+Mkdir xxxxx && cd xxxxx
 ```
 
 <ul>
@@ -75,7 +80,9 @@ Setp5:
 </ul>
 
 ``` bash
-  wget https://raw.githubusercontent.com/aeieli/ffmpeg-for-docker/master/Dockerfile
+
+wget https://raw.githubusercontent.com/aeieli/ffmpeg-for-docker/master/Dockerfile
+
 ```
 
 执行命令生成images：
@@ -88,7 +95,6 @@ Docker build -t='image镜像标签名' .
 文件转码输出（点播HSL分段）：
 
 ``` bash
-//docker run --rm -v /本机输入文件目录:/容器挂载目录 image镜像标签名 -i /容器挂载目录/媒体文件名 -c:v libx264 -c:a aac -f hls -&gt; /本机输出目录/文件名.m3u8
 
 sudo docker run --rm -v /本机输入文件目录:/容器挂载目录 image镜像标签名 -i /容器挂载目录/媒体文件名 -c:v libx264 -c:a aac -map 0 -flags -global_header -f ssegment -segment_time 10 -segment_format mpegts -segment_list /容器挂载目录/媒体输出播放列表.m3u8 /容器挂载目录/媒体输出文件名%03d.ts
 

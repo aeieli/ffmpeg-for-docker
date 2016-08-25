@@ -31,12 +31,12 @@ sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys581
 echo 'deb https://apt.dockerproject.org/repo ubuntu-xenial main' > /etc/apt/sources.list.d/docker.list
 ```
 
-PS: 其他版本Ubuntu，将语句中的<code>‘ ubuntu-xenial ’</code> 替换成对应的版本号
+PS: 其他版本Ubuntu，将语句中的`ubuntu-xenial` 替换成对应的版本号
 
-|        |        |       |       |
+|        |         |        |        |
 | :----: | :----:  |:----:  |:----:  |
 | Ubuntu Precise 12.04 (LTS)| Ubuntu Trusty 14.04 (LTS)| Ubuntu Wily 15.10 | Ubuntu Xenial 16.04 (LTS) |
-|ubuntu-precise |ubuntu-trusty | ubuntu-wily | ubuntu-xenial |
+|ubuntu-precise             | ubuntu-trusty            | ubuntu-wily       | ubuntu-xenial             |
 
 ## Setp5:
 
